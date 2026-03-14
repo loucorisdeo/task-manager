@@ -16,6 +16,9 @@ public class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+
+        Console.WriteLine("on  loading");
+
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.Entity<Tenant>()
