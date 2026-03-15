@@ -83,7 +83,7 @@ public class TasksController : ControllerBase
         return NoContent();
     }
 
-    [HttpPatch("{id:int}/complete")]
+    [HttpPut("{id:int}/complete")]
     public async Task<IActionResult> CompleteTask(int id)
     {
         var tenantIdValue = User.FindFirstValue("tenantId");
@@ -102,6 +102,7 @@ public class TasksController : ControllerBase
 
 
     [HttpDelete("{id:int}")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> DeleteTask(int id)
     {
         var tenantIdValue = User.FindFirstValue("tenantId");
