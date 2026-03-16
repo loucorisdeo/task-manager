@@ -3,7 +3,7 @@
     "TaskManager.Api": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:7066;http://localhost:5066",
+      "applicationUrl": "https://localhost:7015;http://localhost:5066",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

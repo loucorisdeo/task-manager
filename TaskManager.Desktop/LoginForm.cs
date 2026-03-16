@@ -8,9 +8,6 @@ namespace TaskManager.Desktop
 {
     public partial class LoginForm : Form
     {
-
-
-
         private readonly ApiClient _apiClient;
         private readonly AuthService _authService;
 
@@ -59,10 +56,10 @@ namespace TaskManager.Desktop
 
                 _apiClient.SetToken(result.Token);
 
-                
-                 var mainForm = new MainForm(_apiClient);
-                 mainForm.Show();
-                 this.Hide();
+                var mainForm = new MainForm(_apiClient);
+                mainForm.FormClosed += (s, args) => this.Close();
+                mainForm.Show();
+                this.Hide();
             }
             catch (Exception)
             {
