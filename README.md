@@ -7,7 +7,7 @@ full-stack architecture using ASP.NET Core, React, and WinForms.
 
 The application provides a REST API backend with two client interfaces:
 
--   A React single-page web application
+-   A React single-page web application\
 -   A WinForms desktop client
 
 Both clients authenticate using JWT and interact with the same API to
@@ -22,25 +22,25 @@ and support for multiple client types.
 
 ### Authentication
 
--   JWT-based authentication
+-   JWT-based authentication\
 -   Secure API endpoints
 
 ### Task Management
 
--   View tasks
--   Mark tasks complete
+-   View tasks\
+-   Mark tasks complete\
 -   Multi-tenant task isolation
 
 ### Web Client (React)
 
--   Login screen
--   Task dashboard
+-   Login screen\
+-   Task dashboard\
 -   Responsive SPA interface
 
 ### Desktop Client (WinForms)
 
--   Login using JWT authentication
--   Task dashboard using DataGridView
+-   Login using JWT authentication\
+-   Task dashboard using DataGridView\
 -   Ability to refresh and complete tasks
 
 ------------------------------------------------------------------------
@@ -49,26 +49,26 @@ and support for multiple client types.
 
 ### Backend
 
--   ASP.NET Core
--   Entity Framework Core
--   SQLite database
+-   ASP.NET Core\
+-   Entity Framework Core\
+-   SQLite database\
 -   JWT Authentication
 
 ### Frontend
 
--   React
--   JavaScript (JSX)
+-   React\
+-   JavaScript (JSX)\
 -   Axios HTTP client
 
 ### Desktop Client
 
--   .NET WinForms
+-   .NET WinForms\
 -   HttpClient for API communication
 
 ### Other
 
--   REST API
--   JSON serialization
+-   REST API\
+-   JSON serialization\
 -   Git version control
 
 ------------------------------------------------------------------------
@@ -141,6 +141,32 @@ The database will be recreated automatically.
 
 ------------------------------------------------------------------------
 
+## Demo Login Credentials
+
+The database is seeded with demo tenants, users, and tasks for testing.
+
+You can log in using the following credentials:
+
+    Tenant A Admin
+    username: adminA
+    password: Password123!
+
+    Tenant A User
+    username: userA
+    password: Password123!
+
+    Tenant B Admin
+    username: adminB
+    password: Password123!
+
+    Tenant B User
+    username: userB
+    password: Password123!
+
+Note: Passwords are simplified for demonstration purposes.
+
+------------------------------------------------------------------------
+
 ### 3. Run the API
 
     cd TaskManager.Api
@@ -201,36 +227,36 @@ API.
 
 Notes:
 
--   GET /api/tasks returns tasks for the authenticated user's tenant
+-   GET /api/tasks returns tasks for the authenticated user's tenant\
 -   GET /api/tasks/{id} returns a single task for the authenticated
-    user's tenant
--   POST /api/tasks creates a task for the authenticated user's tenant
+    user's tenant\
+-   POST /api/tasks creates a task for the authenticated user's tenant\
 -   PUT /api/tasks/{id} updates a task for the authenticated user's
-    tenant
--   PUT /api/tasks/{id}/complete marks a task as completed
--   DELETE /api/tasks/{id} requires the Admin role
+    tenant\
+-   PUT /api/tasks/{id}/complete marks a task as completed\
+-   DELETE /api/tasks/{id} requires the Admin role\
 -   Task access is tenant-scoped using the tenantId claim from the JWT
 
 ------------------------------------------------------------------------
 
 ## Example Workflow
 
-1.  User logs in through the web client or desktop application
-2.  The API returns a JWT token
-3.  The token is stored by the client
-4.  All subsequent requests include the JWT token
+1.  User logs in through the web client or desktop application\
+2.  The API returns a JWT token\
+3.  The token is stored by the client\
+4.  All subsequent requests include the JWT token\
 5.  The user can view and complete tasks
 
 ------------------------------------------------------------------------
 
 ## Assumptions / Simplifications
 
--   Users are authenticated via JWT tokens issued by the API
--   Tasks are tenant-scoped using the tenantId claim
--   Task deletion is restricted to users with the Admin role
--   SQLite used for simplicity
+-   Users are authenticated via JWT tokens issued by the API\
+-   Tasks are tenant-scoped using the tenantId claim\
+-   Task deletion is restricted to users with the Admin role\
+-   SQLite used for simplicity\
 -   passwords are stored and validated in a simplified way for demo
-    purposes
+    purposes\
 -   desktop app focuses on core flows rather than full feature parity
 
 ------------------------------------------------------------------------
@@ -239,11 +265,11 @@ Notes:
 
 With additional time the following improvements could be added:
 
--   task creation and editing in the desktop client
--   pagination and filtering for large task lists
--   improved UI styling
--   integration tests for API endpoints
--   role-based authorization improvements
+-   task creation and editing in the desktop client\
+-   pagination and filtering for large task lists\
+-   improved UI styling\
+-   integration tests for API endpoints\
+-   role-based authorization improvements\
 -   containerized deployment using Docker
 
 ------------------------------------------------------------------------
@@ -255,9 +281,9 @@ EF Core InMemory.
 
 Covered areas include:
 
--   authentication controller behavior
--   task controller behavior
--   authentication service logic
+-   authentication controller behavior\
+-   task controller behavior\
+-   authentication service logic\
 -   task service logic
 
 Run tests with:
@@ -268,4 +294,5 @@ Run tests with:
 
 ## Author
 
-Louis Corisdeo Senior Software Engineer
+Louis Corisdeo\
+Senior Software Engineer
