@@ -4,11 +4,11 @@ using TaskManager.Domain.Models;
 
 namespace TaskManager.Desktop.Services
 {
-    public class TaskService
+    public class DesktopTaskService
     {
         private readonly ApiClient _apiClient;
 
-        public TaskService(ApiClient apiClient)
+        public DesktopTaskService(ApiClient apiClient)
         {
             _apiClient = apiClient;
         }

@@ -6,7 +6,7 @@ namespace TaskManager.Desktop
     public partial class MainForm : Form
     {
         private readonly ApiClient _apiClient;
-        private readonly TaskService _taskService;
+        private readonly DesktopTaskService _taskService;
         private List<TaskItem> _tasks = new();
 
         public MainForm(ApiClient apiClient)
@@ -14,7 +14,7 @@ namespace TaskManager.Desktop
             InitializeComponent();
 
             _apiClient = apiClient;
-            _taskService = new TaskService(_apiClient);
+            _taskService = new DesktopTaskService(_apiClient);
         }
 
         private async void MainForm_Load(object sender, EventArgs e)
